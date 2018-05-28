@@ -1,0 +1,29 @@
+- 
+  var nav = {
+    home : {
+      url : "/index.html",
+      title : "home"
+    },
+    about : {
+      url : "/about.html",
+      title : "about"
+      },
+    content : {
+      url : "/content.html",
+      title : "content"
+    },
+    contact : {
+      url : "/contact.html",
+      title : "contact"
+    }
+  }
+
+
+header.Header
+  h1.Header__title .MDK
+  nav.Mainnav
+    ul.Mainnav__list
+      each val in nav
+        li.Mainnav__list__item
+          a.Mainnav__list__item__link(href=val.url)
+            p= val.title

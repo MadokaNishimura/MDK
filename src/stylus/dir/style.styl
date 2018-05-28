@@ -1,0 +1,61 @@
+@import "../libs/reset.css"
+
+*
+  outline 1px solid black
+
+body
+  background-color white
+  font-family 'Inconsolata', monospace
+
+html
+  &:before
+    content ""
+    position fixed
+    border 10px solid orange
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+.Header
+.Footer
+  width 1000px
+  margin 0 auto
+
+
+
+.Header
+  background white
+
+  &__title
+    text-align center
+    font-family 'Play', sans-serif
+    font-size 45px
+    padding 20px
+
+
+
+.Mainnav
+
+  &__list
+    list-style-type none
+    display flex
+    justify-content space-around
+
+    &__item
+
+      &__link
+         // text-decoration none
+         // color black
+         display block
+         background yellow
+         padding 80px
+
+         &:hover
+          opacity 0.5
+
+
+.Footer
+
+  &__copyright
+    text-align center
