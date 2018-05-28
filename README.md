@@ -1,15 +1,5 @@
-# MDK
-Madoka
-19980501
-
-000
-0
-0000000
-00000000
-00000
-000
-00
-000000
-
-karakrakrarkakrakr
-Homma
+# content
+hello
+site
+matamata
+hello
