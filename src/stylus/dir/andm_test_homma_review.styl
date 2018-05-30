@@ -1,0 +1,149 @@
+@chaset 'UTF-8'
+// resetをstylus側で読み込み
+@import '../libs/reset.css'
+
+// *
+//   outline 1px solid black
+
+/*
+厳密じゃなくていいけど（俺も未だにぶれてるけど）
+なるべくstyleの順番は揃える習慣をつけていったほうが見通しが良い。
+参考までに本間の並び順、というか分け方例
+
+最初に基本のレイアウト（細かいスタイル→position→画像サイズやパディングマージン）
+z-index 5
+display block
+overflow hidden
+position absolute
+top 0
+left 0
+right 0
+bottom 0
+width 100%
+height 100%
+padding 10px 20px 24px
+margin 10px auto
+
+次に書体関係
+color #f00
+font-family 'Montserrat', sans-serif
+font-size 10px
+font-weight bold
+font-style italic
+text-align center
+text-decoration underline
+line-height 1.5
+letter-spacing 0.05em
+
+次にbで始まるあれこれ
+background-color #ccc
+background-image url(/bg.jpg)
+background-repeat no-repeat
+background-size cover
+background-position center
+border 1px solid #f00
+box-sizing border-box
+
+アニメーションに関係するところ
+opacity 0
+transform scale(0.8)
+transition opacity 120ms ease-in-out
+*/
+
+body
+  margin 0 auto
+  font-family sans-serif
+
+/*
+あとで説明するけど、imgはブロック要素にしておきたい
+また、レスポンシブに対応するため横幅は100%
+*/
+img
+  display block
+  width 100%
+  height auto
+
+.Recommend
+  background-color #EAE9E4
+  color #373737
+
+  &__title
+    font-size 20px
+    text-align center
+    font-family 'Montserrat', sans-serif
+    // 4つ目のパラメータは省略できる
+    padding 36px 0 23px
+
+    &__main
+      // resetで戻っちゃったからboldを再指定
+      font-weight bold
+
+    &__sub
+      font-size 10px
+      display block
+      text-align center
+
+  &__list
+    list-style-type none
+    border-top 1px solid #FFFFFF
+    // windowの横幅に対するパーセント表示
+    width (100vw * 650 / 750)
+    padding 26px 0 45px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+
+    &__item
+      width (100vw * 300 / 750)
+      margin 0 (100vw * 46 / 750) 30px 0
+      // relative削除（後述photo要素）
+      // position relative
+
+      &:nth-child(even)
+        margin-right 0
+
+    &__photo
+      position relative
+      display block
+
+    &__icon
+      position absolute
+      top -2px
+      right -2px
+      width 22px
+
+    &__info
+      position relative
+      align-items center
+      font-family 'Montserrat', sans-serif
+      font-size 8px
+      margin 6px 0
+      padding-right 16px
+
+    &__ctg
+      color #C61E23
+      border-bottom 1px solid #C61E23
+      display inline
+      line-height 1.8
+
+    &__pr
+      // 右上に揃えたい
+      top 2px
+      right 0
+      position absolute
+      color #FFFFFF
+      background-color #848484
+      margin-left auto
+      display inline-block
+      padding 0 2px
+
+    &__ttl
+      font-size 13px
+      font-weight bold
+
+    &__sub
+      font-size 10px
+      color #848484
+
+    // &__topright
+    //   text-align right
