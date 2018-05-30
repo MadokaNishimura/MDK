@@ -1,0 +1,80 @@
+-
+  var recommendlist = {
+    photo1 : {
+      src : "images/photo1.jpg",
+      new : "images/new.svg",
+      top__text__left : "INTEREST",
+      top__text__right : "PR",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    photo2 : {
+      src : "images/photo2.jpg",
+      new : "images/new.svg",
+      top__text__left : "LIVING",
+      top__text__right : "PR",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    photo3 : {
+      src : "images/photo3.jpg",
+      new : "",
+      top__text__left : "FASHION",
+      top__text__right : "",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    photo4 : {
+      src : "images/photo4.jpg",
+      new : "",
+      top__text__left : "INFO",
+      top__text__right : "",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    photo5 : {
+      src : "images/photo5.jpg",
+      new : "",
+      top__text__left : "FASHION",
+      top__text__right : "",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    photo6 : {
+      src : "images/photo6.jpg",
+      new : "",
+      top__text__left : "INFO",
+      top__text__right : "",
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    }
+  }
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title andM|RECOMMEND
+    .
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+    link(href=CSS_DIR + "andm_test.css" rel="stylesheet" type="text/css")
+    link(href=CSS_DIR + "reset.css" rel="stylesheet" type="text/css")
+
+  body
+    
+    section.Recommend
+      
+      div.Recommend__title
+        h3.Recommend__title__main RECOMMEND
+        p.Recommend__title__sub 編集部イチオシ  
+      ul.Recommend__list
+        each val in recommendlist
+          li.Recommend__list__item
+            img(src=val.src width="150px" height="auto").Recommend__list__item__image
+            img(src=val.new width="22px" height="auto").Recommend__list__item__icon
+            div.Recommend__list__item__text
+              div.Recommend__list__item__text__top
+                p.Recommend__list__item__text__top__left= val.top__text__left
+                p.Recommend__list__item__text__top__right= val.top__text__right      
+              p.Recommend__list__item__text__main= val.text__main
+                br
+                span.Recommend__list__item__text__main__sub= val.text__bottom
+        
