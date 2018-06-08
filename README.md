@@ -1,3 +1,2 @@
-#test site
-
-Madoka Nishimura test site
+# test site
+Madoka Nishimura's test site
