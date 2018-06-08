@@ -1,0 +1,105 @@
+-
+  // 連想配列ではなく、配列として定義
+  // photo1、photo2という名前をつけてしまうと、順序を入れ替える時、名前も入れ替えないと混乱する
+  // 配列（[]で定義するやつ）の場合、名前をつけなくていいので、順序の入れ替えが起きてもおかしくならない。
+  var recommendlist = [
+    {
+      // 今回は画像ファイルは配列の並び順で自動に切り替えるように設定してみた（後述参照）。
+      // ただ、西村さんのやってくれた感じで正解。（ケースバイケース）
+      new : true,// newはbooleanという値（真偽値）を使用。画像は共通なので、trueかどうかで画像を出すかどうかを決める。
+      top__text__left : "INTEREST",
+      pr : true,// newと同じ
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    {
+      new : true,
+      top__text__left : "LIVING",
+      pr : true,
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    {
+      new : false,
+      top__text__left : "LIFE STYLE AND WOMEN'S FASHION",
+      pr : true,
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    {
+      new : false,
+      top__text__left : "INFO",
+      pr : false,
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    {
+      new : false,
+      // 仮にカテゴリが長い場合
+      top__text__left : "FASHION",
+      pr : false,
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    },
+    {
+      new : false,
+      top__text__left : "INFO",
+      pr : false,
+      text__main : "ＰＣが消える未来がくる？／アップルのスピーカーの可能性",
+      text__bottom : "キャンピングカーで行こう！"
+    }
+  ]
+
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title andM|RECOMMEND
+
+    //- 以下の書き方、最高だね。pugをマスターしてるね。
+    .
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+
+    //- リセットは最初に読み込む
+    //- 今回はstylus側で読み込んでみるので、とりあえずコメントアウト
+    //- link(href=CSS_DIR + "reset.css" rel="stylesheet" type="text/css")
+    link(href=CSS_DIR + "andm_test_homma_review.css" rel="stylesheet" type="text/css")
+
+  body
+
+    //- コンポーネント（ブロック）名、バッチリです。
+    section.Recommend
+
+      //- titleのところ、めっちゃいい感じ！だけど一個だけ、、、
+      //- すでに使用例を示しているが、pugではdivは省略して書ける
+      .Recommend__title
+        h3.Recommend__title__main RECOMMEND
+        p.Recommend__title__sub 編集部イチオシ
+
+      ul.Recommend__list
+        //- iはindex（通し番号）のi。ただし、0から始まる
+        each val, i in recommendlist
+          li.Recommend__list__item
+            //- ここから、ちょっとクラス名が長いので整理してみた
+
+            //- imgは習慣として、divで囲っておくと、のちのち困ることが少ない。
+            //- もう一つ理由があって、imgは元々インライン要素。インライン要素とブロック要素を横に並べるのは基本やめておいたほうがいい。
+            //- ただし、本間はimgをブロック要素に変換して使用しているが・・・戻ったら説明します。
+            .Recommend__list__photo
+              //- images、ファイル名のphoto部分は共通なので、こうしておく。
+              //- 外部ドメインが混ざる可能性があるときや、並べ替えのことを考えた場合は西村さんのでOK
+              img(src='/images/photo'+(i+1)+'.jpg')
+
+              - if(val.new)
+                //- 制御構文ifで、newがtrueの時のみiconを表示
+                //- .Recommend__list__photoの中に入れる（後ほど説明）
+                .Recommend__list__icon
+                  img(src='/images/new.svg')
+
+            .Recommend__list__text
+              .Recommend__list__info
+                p.Recommend__list__ctg= val.top__text__left
+                - if(val.pr)
+                  p.Recommend__list__pr PR
+              p.Recommend__list__ttl= val.text__main
+              p.Recommend__list__sub= val.text__bottom
+
