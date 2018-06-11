@@ -1,0 +1,102 @@
+
+-
+  var spotlist = [
+    {ctg : "other",shopname : "サバエ・シティーホテル",shopgenre : "その他/宿泊施設",add : "鯖江市桜町3丁目3-3",tel : "0778-53-1122",time : "11:00-18:00",day : "火曜日",favorite : "サバエ・シティーホテル特製ローストビーフサンド 500円",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "めだか(たこ焼き)",shopgenre : "その他/たこ焼き屋",add : "鯖江市桜町1丁目5-9",tel : "0778-51-8881",time : "11:00-21:00",day : "火曜日",favorite : "たこ焼き400円・サラダ焼き1ヶ120円<br> ししのやき肉丼680円",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "メゾン・ド・レトワール",shopgenre : "カフェ・スイーツ",add : "鯖江市桜町3丁目3-3-301",tel : "0778-53-1660",time : "10:00-19:00(日曜は18:00まで)",day : "火曜日",favorite : "マンゴーの王様プリン330円<br> 21世紀プリン330円<br> 20世紀プリン300円",takeout : "あり",coupon : "※お1人様プリン4個以上の購入で、ドリンクサービス",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "かわだ温泉ラポーゼかわだ",shopgenre : "その他/宿泊施設",add : "鯖江市上河内町19丁目37-2",tel : "0778-65-0012",time : "日帰入浴10:00～23:00宿泊可",day : "年中無休",favorite : "サンドーム送迎付プラン1泊2食<br> 1名様9,000円～",takeout : "なし",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "green parlourベルベール",shopgenre : "カフェ・スイーツ",add : "鯖江市小黒町1丁目5-3",tel : "0778-52-3888",time : "9:00～23:00(L.O.:22:30)",day : "火曜日<br> (祝日の場合翌日休み)",favorite : "オムライス780円（税込）",takeout : "あり",coupon : "※お食事された方は、ミニデザート1品サービスします(ミニデザートの内容は店頭で確認してください)",shopurl : "#",googlemap : "#"},
+    {ctg : "rest",shopname : "イル・ヴィゴーレ",shopgenre : "レストラン",add : "鯖江市桜町3丁目3-3サバエ・シティホテル8F",tel : "0778-52-1102",time : "ランチタイム11:00～14:00(14:00L.O.)<br> カフェタイム14:00～16:00<br> ディナータイム18:00～22:00(20:30オーダーストップご予約優先)",day : "火曜日",favorite : "プリモランチ1,200円<br> レディースランチ1,500円<br> ラクレットランチ1,700円",takeout : "なし",coupon : "※クーポン提示で10%割引",shopurl : "#",googlemap : "#"},
+    {ctg : "rest",shopname : "洋食ビストロシトラス",shopgenre : "レストラン",add : "鯖江市有定町2丁目405",tel : "0778-43-5760",time : "ランチ11:30～14:00(L.O.)<br> ディナー18:00～21:00(L.O.)",day : "毎週水曜日、第3木曜日、月1回不定休",favorite : "シトラス風ハンバーグステーキ\1,600",takeout : "なし",coupon : "※コンサート帰りのお客様にクーポン提示でワンドリンクサービス",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "けーきやYANAGIMOTO",shopgenre : "カフェ・スイーツ",add : "鯖江市住吉町3丁目1-30",tel : "0778-52-8880",time : "10:00～19:00",day : "火曜日",favorite : "やわらかプリン270円<br> チーズケーキ320円<br> ミルフィーユ340円など",takeout : "あり",coupon : "※クーポンとコンサートチケット提示で1,000円以上お買い上げのお客様2枚入クッキー1袋プレゼント",shopurl : "#",googlemap : "#"},
+    {ctg : "noodle",shopname : "九龍飯店",shopgenre : "ラーメン・中華",add : "鯖江市有定町2丁目4-28-2",tel : "0778-51-4090",time : "11:30～14:00(L.O.13:30)<br> 17:00～21:30頃(不定)",day : "月曜(祝日の場合営業)",favorite : "えびチリ1,500円・黒酢スブタ1,500円<br> (辛)ラージャンめん1000円<br> 九龍めん1,000円・麻婆丼1,000円",takeout : "あり",coupon : "※コンサートチケットご提示の方<br> ウーロン茶1杯サービス",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "ヨーロッパンキムラヤ",shopgenre : "その他/パン",add : "鯖江市旭町2丁目3-20",tel : "0778-51-0502",time : "9:30～18:00",day : "日曜日、祝日",favorite : "大福あんぱん200円・ハード食パン1山162円<br> 軍隊堅パン432円・バタード151円<br> ※価格は全て税込",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "jpn",shopname : "釜めし専門店釜蔵",shopgenre : "そば・うどん・和食",add : "鯖江市柳町4丁目521",tel : "0778-52-2846",time : "11:00～21:00(L.O.)",day : "木曜日",favorite : "若狭牛ごぼう釜めし1980円(税込)<br> 焼さば釜めし1380円(税込)<br> ソースカツ丼とおろしそばのセット<br> 1080円(税込)",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "jpn",shopname : "そば道場めん処食房藤栄",shopgenre : "そば・うどん・和食",add : "鯖江市上鯖江1丁目1-15",tel : "0778-51-9141",time : "11:30～14:00",day : "毎月9日(平日)毎週月曜日・木曜日",favorite : "越前おろしそば(並)\600 (大)\800<br> 特々もりそば(3種のダシ付きカツオ・コンブ・岩塩コンブ)\1200 5人前\2800",takeout : "あり",coupon : "※コンサートイベント期間中クーポン提示の方全品\50円引き",shopurl : "#",googlemap : "#"},
+    {ctg : "noodle",shopname : "御園飯店",shopgenre : "ラーメン・中華",add : "鯖江市水落町8丁目6",tel : "0778-51-6539",time : "月～土ランチ11:00～14:00(L.O.)<br> 金・土ディナー17:00～22:00(L.O.)<br> 月～木ディナー17:00～21:00(L.O.)<br> 日・祝11:00～21:00(L.O.)",day : "火曜日・第2水曜日<br> (お盆・年末年始・大型連休等は変更あり)",favorite : "骨つき唐揚げ950円(税別)<br> ギョウザ470円(税別)平日半額<br> スペシャル天津飯950円(税別)",takeout : "あり",coupon : "※クーポン提示時1000円以上の会計で10%off<br> (上限割引5000円まで)<br> ※他のサービスとの併用は不可",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "ミート&デリカささき",shopgenre : "その他/食肉販売・弁当",add : "鯖江市本町3丁目1-5",tel : "0778-52-4129",time : "AM9:00～PM7:30",day : "日曜日",favorite : "サバエドッグ260円＋税<br> ワンコイン弁当ステーキ重1,000円＋税",takeout : "あり",coupon : "※クーポン提示の方全品3%引き",shopurl : "#",googlemap : "#"},
+    {ctg : "jpn",shopname : "味見屋",shopgenre : "そば・うどん・和食",add : "鯖江市本町2丁目2-19",tel : "0778-51-0449",time : "10:30～20:00",day : "木曜日",favorite : "しょう油かつ丼770円<br> カレーそば710円",takeout : "なし",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "rest",shopname : "道の駅西山公園",shopgenre : "レストラン",add : "鯖江市桜町3丁目950",tel : "0778-51-8181",time : "9:00～18:00",day : "年末年始",favorite : "おろしそば500円・ソースカツ丼750円<br> 鯖丸焼定食900円・西山コロッケ140円<br> つつじソフトクリーム300円",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "楽(ラアク)",shopgenre : "その他/カフェ・バー",add : "鯖江市本町2丁目2-21みのわビル1F",tel : "090-7744-4683",time : "月～金10:00～24:00<br> 土、日16:00～24:00",day : "第3月曜日、火曜日",favorite : "楽ピザ800円(税抜)",takeout : "なし",coupon : "※アイスコーヒー半額",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "アプレシオ鯖江店",shopgenre : "カフェ・スイーツ",add : "鯖江市柳町4丁目10-19",tel : "0778-52-9156",time : "24時間営業",day : "年中無休",favorite : "(土、日、祝)<br> 3時間1000円 1200円<br> 6時間1500円 1700円<br> 9時間2100円 2300円<br> 12時間2500円2700円",takeout : "なし",coupon : "※クーポン提示の方100円引き",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "山うに屋ほやっ停",shopgenre : "その他/ちょい呑み屋台(たこ焼き)",add : "鯖江市旭町1丁目1-4久保田酒店敷地内",tel : "070-2251-1991",time : "11:00～14:00 16:00～22:00<br> (土曜のみ16:00～22:00)",day : "日曜日",favorite : "山うにたこ焼き500円",takeout : "あり",coupon : "※ライブ来場者チケット等提示でアイスコーヒー1杯無料",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "鯖江菓子工房ヤマハツ",shopgenre : "カフェ・スイーツ",add : "鯖江市北野町2丁目19-20",tel : "0778-51-1162",time : "9:00～19:00",day : "無休(火曜日のみ不定休)",favorite : "吟醸まんじゅう167円(税込)<br> スフレロール972円(税込)",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "御菓子司大黒屋",shopgenre : "カフェ・スイーツ",add : "鯖江市本町2丁目1-13",tel : "0778-51-0451",time : "9:00～19:00",day : "木曜",favorite : "つつじ饅頭・めがね焼各110円<br> 菜花糖400円～・くず流し各700円<br> 栗きんとん200円～・水ようかん480円",takeout : "あり",coupon : "※クーポン提示の方5% off",shopurl : "#",googlemap : "#"},
+    {ctg : "drink",shopname : "絆",shopgenre : "居酒屋",add : "鯖江市日の出町2丁目1駅前ビル",tel : "090-6817-0090",time : "19:00～24:00",day : "日曜日",favorite : "飲み放題5000円",takeout : "なし",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "drink",shopname : "アティックルーム",shopgenre : "居酒屋",add : "鯖江市日の出町2丁目1",tel : "090-2835-7703",time : "ランチ11:30～<br> 18:00～2:00",day : "月曜日",favorite : "四川風麻婆豆腐<br> 昼食時：定食あり1080円",takeout : "なし",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "貘の棲む森",shopgenre : "その他/鉄板焼きお好み焼き",add : "鯖江市新横江1丁目",tel : "0778-51-7556",time : "11:30～14:00<br> 17:00～22:00",day : "月曜日",favorite : "貘ミックス(お好み焼き)950円<br> 各種鉄板焼き(ステーキ)800円～",takeout : "あり",coupon : "※お好きなドリンク1杯サービス(ボトル以外)",shopurl : "#",googlemap : "#"},
+    {ctg : "noodle",shopname : "しゅんしゅんめん",shopgenre : "ラーメン・中華",add : "鯖江市東鯖江1丁目506",tel : "090-7740-0220",time : "昼営業<br> 11:30～14:30<br> 夜営業<br> 火曜～土曜18:00～3:00<br> 日曜祭日18:00～1:00",day : "月曜日",favorite : "ラーメン650円・ミニチャーシュー丼450円<br> 半チャーシュー750円<br> おすすめ人気チョイ辛ラーメン",takeout : "なし",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "リトルデコ",shopgenre : "カフェ・スイーツ",add : "鯖江市宮前2丁目18-5",tel : "0778-51-7212",time : "10:00～19:00",day : "月曜日",favorite : "生チョコサンド\195",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "drink",shopname : "秋吉神明店",shopgenre : "居酒屋",add : "鯖江市三六町1丁目13-8",tel : "0778-52-2580",time : "平日・土曜17:00～23:00<br> 日曜・祝日16:30～22:30",day : "水曜日",favorite : "焼鳥・串揚げ・串かつ",takeout : "あり",coupon : "※クーポン提示の方ウーロン茶1杯サービス",shopurl : "#",googlemap : "#"},
+    {ctg : "other",shopname : "久保田酒店",shopgenre : "その他/酒販売",add : "鯖江市旭町1丁目1-4",tel : "0778-51-0252",time : "9:00～20:00",day : "日曜日(臨時開店あり)",favorite : "立ち飲み(試飲)1種 250円<br> 〃 3種飲み比べ 450円<br> 麹ドリンク(ノンアルコール) 400円～",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"},
+    {ctg : "cafe",shopname : "えきライブラリーtetote",shopgenre : "カフェ・スイーツ",add : "鯖江市日の出町1丁目2(JR駅2F)",tel : "0778-42-5886",time : "9:00～17:20(17:00ラストオーダー)",day : "火曜日",favorite : "越のルビー<br> ・そば(600円)カレー(700円)<br> ・スイーツ(サバエシュー)(250円)",takeout : "あり",coupon : "",shopurl : "#",googlemap : "#"}
+  ]
+  
+html(lang='ja')
+  head
+
+    include /layout/head
+    link(href=CSS_DIR + "Spot_sp.css" rel="stylesheet" type="text/css")
+
+  body
+
+    section.Spot
+      
+      
+      
+      h2.Spot__title  その他
+      
+      
+
+      ul.Spot__list
+        each val in spotlist
+          li.Spot__item
+                              
+            .Spot__top
+                
+              .Spot__top__title
+                img.Spot__top__title__icon(src="/assets/images/spot_icon.svg")
+                p.Spot__top__title__main= val.shopname
+                  br
+                  span.Spot__top__title__sub= val.shopgenre
+                    
+              .Spot__top__content
+                img.Spot__top__content__photo(src="/assets/images/gray.svg")
+                ul.Spot__top__content__add
+                  li.Spot__top__content__add__item 
+                    img.Spot__top__content__add__icon(src="/assets/images/spot_add.svg")
+                    p.Spot__top__content__add__text!= val.add
+                  li.Spot__top__content__add__item
+                    img.Spot__top__content__add__icon(src="/assets/images/spot_tel.svg")
+                    p.Spot__top__content__add__text!= val.tel
+                  li.Spot__top__content__add__item
+                    a.Spot__top__content__button(href="val.shopurl")
+                      p.Spot__top__content__button__text お店のページへ
+
+                  
+                  
+            .Spot__middle
+              table
+                tr.Spot__middle__list
+                  th.Spot__middle__item 営業時間
+                  td.Spot__middle__text!= val.time
+                tr.Spot__middle__list
+                  th.Spot__middle__item 定休日
+                  td.Spot__middle__text= val.day
+                tr.Spot__middle__list
+                  th.Spot__middle__item おすすめ
+                    br
+                    | メニュー
+                  td.Spot__middle__text!= val.favorite
+                tr.Spot__middle__list
+                  th.Spot__middle__item 持ち帰り
+                    br
+                    | メニュー
+                  td.Spot__middle__text= val.takeout
+              p.Spot__middle__bottom!= val.coupon
+              a.Spot__button__right(href="val.googlemap")
+                p.Spot__button__right__text google mapから見る
+
+                
+                        
+        

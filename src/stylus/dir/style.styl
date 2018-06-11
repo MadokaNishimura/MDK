@@ -1,61 +1,222 @@
 @import "../libs/reset.css"
+// *
+//   outline 1px solid black
 
-*
-  outline 1px solid black
+img
+  display block
+  width 100%
+  height auto
 
-body
-  background-color white
-  font-family 'Inconsolata', monospace
-
-html
-  &:before
-    content ""
-    position fixed
-    border 10px solid orange
-    top 0
-    left 0
-    right 0
-    bottom 0
-
-.Header
-.Footer
-  width 1000px
-  margin 0 auto
-
-
-
-.Header
-  background white
+.Recommend
+  color #373737
+  background-color #EAE9E4
 
   &__title
+    padding 36px 0 23px
+    font-size 20px
     text-align center
-    font-family 'Play', sans-serif
-    font-size 45px
-    padding 20px
+    font-family 'Montserrat', sans-serif
 
+    &__main
+      font-weight bold
 
-
-.Mainnav
+    &__sub
+      font-size 10px
 
   &__list
-    list-style-type none
-    display flex
-    justify-content space-around
+    overflow hidden
+    width 1000px
+    margin 0 auto
+
+  &__item
+    float left
+    width 180px
+    margin 0 25px 50px 0
+
+    &:nth-child(5n)
+      margin-right 0
+
+    &:nth-child(6n)
+      clear both
+
+  &__photo
+    position relative
+
+    &__icon
+      position absolute
+      top -3px
+      right -3px
+      width 33px
+
+  &__text
+
+    &__info
+      position relative
+      margin 15px 0
+      font-family 'Montserrat', sans-serif
+      font-size 12px
+
+    &__ctg
+      display inline
+      color #C61E23
+      border-bottom 1px solid #C61E23
+
+    &__pr
+      display inline
+      position absolute
+      right 0
+      padding 0 2px
+      color #FFFFFF
+      background-color #848484
+
+    &__ttl
+      font-size 18px
+      font-weight bold
+      line-height 1.5
+
+    &__sub
+      font-size 13px
+      font-weight normal
+      color #848484
+
+
+
+@media screen and (max-width: 767px)
+
+  mn=(100vw / 750)
+
+  .Recommend
+    color #373737
+    background-color #EAE9E4
+
+    &__title
+      padding 36px 0 23px
+      font-size (40 * mn)
+      text-align center
+      font-family 'Montserrat', sans-serif
+
+      &__main
+        font-weight bold
+
+      &__sub
+        font-size (10 * mn)
+
+    &__list
+      overflow hidden
+      width (700 * mn)
+      margin 0 auto
 
     &__item
+      float left
+      width (330 * mn)
+      margin 0 (40 * mn) 40px 0
 
-      &__link
-         // text-decoration none
-         // color black
-         display block
-         background yellow
-         padding 80px
+      &:nth-child(2n)
+        margin-right 0
 
-         &:hover
-          opacity 0.5
+      // &:nth-child(odd)
+      //   clear both
+
+    &__photo
+      position relative
+
+      &__icon
+        position absolute
+        top (-4 * mn)
+        right (-4 * mn)
+        width (44 * mn)
+
+    &__text
+
+      &__info
+        position relative
+        margin 15px 0
+        font-family 'Montserrat', sans-serif
+        font-size 12px
+
+      &__ctg
+        display inline
+        color #C61E23
+        border-bottom 1px solid #C61E23
+
+      &__pr
+        display inline
+        position absolute
+        right 0
+        padding 0 2px
+        color #FFFFFF
+        background-color #848484
+
+      &__ttl
+        font-size 18px
+        font-weight bold
+        line-height 1.5
+
+      &__sub
+        font-size 13px
+        font-weight normal
+        color #848484
 
 
-.Footer
 
-  &__copyright
-    text-align center
+
+
+
+
+
+
+
+// @display
+// html
+  // &:before
+  //   content ""
+  //   position fixed
+  //   border 10px solid orange
+  //   top 0
+  //   left 0
+  //   right 0
+  //   bottom 0
+
+// .Header
+// .Footer
+//   width 1000px
+//   margin 0 auto
+//
+//
+//
+// .Header
+//   background white
+//
+//   &__title
+//     text-align center
+//     font-family 'Play', sans-serif
+//     font-size 45px
+//     padding 20px
+//
+//
+//
+// .Mainnav
+//
+//   &__list
+//     list-style-type none
+//     display flex
+//     justify-content space-around
+//
+//     &__item
+//
+//       &__link
+//          // text-decoration none
+//          // color black
+//          display block
+//          background yellow
+//          padding 80px
+//
+//          &:hover
+//           opacity 0.5
+//
+//
+//
+// .Footer
+//
+//   &__copyright
+//     text-align center
