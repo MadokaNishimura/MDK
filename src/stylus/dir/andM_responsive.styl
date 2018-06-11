@@ -12,21 +12,24 @@ img
   background-color #EAE9E4
 
   &__title
-    padding 36px 0 23px
-    font-size 20px
+    padding 50px 0 30px
     text-align center
     font-family 'Montserrat', sans-serif
+    letter-spacing 1px
 
     &__main
+      font-size 30px
       font-weight bold
 
     &__sub
-      font-size 10px
+      font-size 15px
 
   &__list
     overflow hidden
     width 1000px
     margin 0 auto
+    padding-top 30px
+    border-top 1px solid #FFFFFF
 
   &__item
     float left
@@ -35,9 +38,6 @@ img
 
     &:nth-child(5n)
       margin-right 0
-
-    &:nth-child(6n)
-      clear both
 
   &__photo
     position relative
@@ -86,42 +86,35 @@ img
   mn=(100vw / 750)
 
   .Recommend
-    color #373737
-    background-color #EAE9E4
 
     &__title
-      padding 36px 0 23px
-      font-size (40 * mn)
-      text-align center
-      font-family 'Montserrat', sans-serif
+      padding (70 * mn) 0 (50 * mn)
 
       &__main
-        font-weight bold
+        font-size (40 * mn)
 
       &__sub
-        font-size (10 * mn)
+        font-size (20 * mn)
 
     &__list
-      overflow hidden
       width (700 * mn)
-      margin 0 auto
+      padding-top (50 * mn)
+      border-top 1px solid #FFFFFF
 
     &__item
       float left
       width (330 * mn)
-      margin 0 (40 * mn) 40px 0
+      margin 0 (40 * mn) (50 * mn) 0
 
       &:nth-child(2n)
         margin-right 0
 
-      // &:nth-child(odd)
-      //   clear both
+      &:nth-child(5n)
+        margin-right (40 * mn)
 
     &__photo
-      position relative
 
       &__icon
-        position absolute
         top (-4 * mn)
         right (-4 * mn)
         width (44 * mn)
@@ -129,33 +122,14 @@ img
     &__text
 
       &__info
-        position relative
-        margin 15px 0
-        font-family 'Montserrat', sans-serif
-        font-size 12px
-
-      &__ctg
-        display inline
-        color #C61E23
-        border-bottom 1px solid #C61E23
-
-      &__pr
-        display inline
-        position absolute
-        right 0
-        padding 0 2px
-        color #FFFFFF
-        background-color #848484
+        margin (20 * mn) 0
+        font-size (20 * mn)
 
       &__ttl
-        font-size 18px
-        font-weight bold
-        line-height 1.5
+        font-size (33 * mn)
 
       &__sub
-        font-size 13px
-        font-weight normal
-        color #848484
+        font-size (25 * mn)
 
 
 
