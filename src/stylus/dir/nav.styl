@@ -1,0 +1,47 @@
+@charset 'utf-8'
+@import '../libs/reset.css'
+
+body
+  background blue
+
+a
+  color black
+  text-decoration none
+
+  &:hover
+    color gray
+
+.clear-fix
+
+  &:before
+  &:after
+    content ''
+    display block
+    clear both
+
+
+.Accordion
+  width 300px
+
+  &__list
+
+  &__item
+    position relative
+    padding 5px 20px
+    font-size 20px
+    font-weight bold
+    background #FFFFFF
+
+    &__left
+      position absolute
+      top 11px
+      left 0
+
+
+    &__center
+      text-indent 10px
+
+    &__right
+      position absolute
+      top 11px
+      right 0

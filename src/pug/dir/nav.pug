@@ -1,0 +1,35 @@
+extends /layout/layout.pug
+
+block deta
+  
+block css
+  link(href=CSS_DIR + "nav.css" rel="stylesheet" type="text/css") 
+  .
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> 
+  
+  
+block script
+  script(src=JS_DIR + "nav.js" type="text/javascript" charset='UTF-8')
+
+block content
+  -
+    var listtext = ['History','Fiction','Fantasy','Action']
+    var listitem = ['History book','Fiction book','Fantasy book','Action book']
+    
+  ul.Accordion
+    - for(var i = 0; i < 4; i++)
+      li.Accordion__list
+        div.Accordion__item
+          i.Accordion__item__left.fa.fa-road
+          p.Accordion__item__center #{listtext[i]}
+          i.Accordion__item__right.fa.fa-chevron-down
+        ul.Accordion__sublist
+          li.Accordion__subitem
+            a(href='#') #{listitem[i]}1
+          li.Accordion__subitem
+            a(href='#') #{listitem[i]}2
+          li.Accordion__subitem
+            a(href='#') #{listitem[i]}3
+          li.Accordion__subitem
+            a(href='#') #{listitem[i]}4
+  
